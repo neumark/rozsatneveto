@@ -43,6 +43,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * 7.0 - Footer
  * 8.0 - Media Queries
  * 9.0 - Print
+ * 10.0 - Zsolt's original CSS
  * ----------------------------------------------------------------------------
  */
 
@@ -3123,3 +3124,318 @@ footer.entry-meta {
 		color: #333;
 	}
 }
+
+/**
+ * 10.0 Original CSS from Zsolt
+ * ----------------------------------------------------------------------------
+ */
+/*--------css reset--------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*--------css reset--------*/
+
+
+body {
+	background: url('images/rozsa_background.png')
+	}
+	
+div.wrapper {
+	width: 960px;
+	margin: 14px auto 0px auto;
+	padding: 0 4px 0 4px;
+}
+
+.container {
+	width: 960px;
+	background: url('images/rozsa_background_2.png') repeat left top; 
+	margin: 0 0 14px 0;
+	position: relative;
+	clear: both;
+	-webkit-border-radius: 6px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	border-radius: 6px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	-webkit-box-shadow: inset 0px 0px 15px rgba(100,0,28,0.03);
+	box-shadow: inset 0px 0px 15px rgba(100,0,28,0.03);
+	padding: 20px 0;
+  /* useful if you don't want a bg color from leaking outside the border: */
+  background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
+}
+
+.head {
+	height: 208px;
+	padding: 0 0;
+}	
+
+
+#logo {
+	position: absolute;
+	left: 40px;
+	top: 34px;
+}
+
+.head h1 {
+	position: absolute;
+	right: 40px;
+	top: 66px;
+	width: 300px;
+	text-align: center;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	font-weight: normal;
+	font-style: italic;
+	color: #a89495;
+
+}
+
+.head p {
+	position: absolute;
+	width: 960px;
+	text-align: center;
+	bottom:14px;
+	font-size: 0.9em;
+	font-weight: bold;
+	color: #826668;
+}
+
+.head a {
+	font-weight: bold;
+	color: #826668;
+	text-decoration: none;
+}
+
+.head a:hover {
+		/*color: #826668;*/
+		color: #957e7f;
+}
+
+p {
+	font-family: Georgia,"Times New Roman",Serif;
+	font-size: 0.9em;
+	line-height: 1.3em;
+	color: #392913;
+	margin: 14px 0 0 0;
+}
+
+.galeria p {
+	margin: 0 0 0 0;
+}
+
+a {
+	color: #ae6798;
+	font-size: 0.9em;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+a:hover {
+	/*color: #bf79aa;*/
+	/*color: #bf7d9d;*/
+	color: #d197b4;
+	/*color: #876835;*/
+}
+
+h1 {
+	
+	font-family: Georgia,"Times New Roman",Serif;
+	font-size: 1.7em;
+	font-weight: bold;
+	line-height: 1.3em;
+	color: #943476;
+}
+
+h2 {
+	
+	font-family: Georgia,"Times New Roman",Serif;
+	font-size: 1.1em;
+	font-weight: bold;
+	line-height: 1.3em;
+	color: #943476;
+	margin: 14px 0 0 0;
+}
+
+.galeria h2 {
+	margin: 28px 0 0 0;
+}
+
+
+
+h3 {
+	
+	font-family: Georgia,"Times New Roman",Serif;
+	font-size: 0.9em;
+	line-height: 1.3em;
+	color: #392913;
+	margin: 14px 0 0 0;
+	font-weight: bold;
+}
+
+.left_content a {
+	font-family: Georgia,"Times New Roman",Serif;
+	font-size: 0.8em;
+	line-height: 1.3em;
+	color: #392913;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.left_content a.aktiv {
+	color: #a18c8e;
+}
+
+.left_content a.aktiv:hover {
+	color: #947b6a;
+}
+
+.left_content a:hover {
+	color: #876835;
+}
+
+.left_content h1{
+	font-size: 1.2em;
+	margin: 14px 0 7px 0;
+}
+
+.left_content h1.elso{
+	margin: 0 0 7px 0;
+}
+
+
+
+	
+.left_content {
+	 /* background: url('img/rozsa_background_2.png') repeat right top; */
+	float: left;
+	/*width: 320px;*/
+	width: 280px;
+	margin: 0 0 0 0px;
+	padding-right: 20px;
+	padding-left: 20px;
+	height: auto;
+	/*border-right: solid 2px rgba(255,255,255,0.38);*/
+}
+
+.right_content {
+	float: left;
+	/*width: 640px;*/
+	width: 598px;
+	height: auto;
+	margin: 0 0 0 0;
+	padding-right: 20px;
+	padding-left: 20px;
+	/* background: blue; */
+	/* background: url('img/rozsa_background_2.png') repeat right top; */
+	float: left;
+	border-left: solid 2px rgba(255,255,255,0.38);
+}
+
+
+.kep {
+	width: 598px;
+	-webkit-border-radius: 6px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	border-radius: 6px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	margin-bottom: 14px;
+}
+
+.kep_index {
+	float: left;
+	margin-right: 8px;
+	width: 194px;
+	-webkit-border-radius: 6px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	border-radius: 6px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	margin-bottom: 8px;
+}
+
+.kep_index.last {
+	margin-right: 0;
+}
+
+
+
+#facebook_button {
+	float: left;
+	background: url(img/facebook_button.png) no-repeat top left;
+	padding-left: 56px;
+	margin-top: 56px;
+	font-weight: normal;
+	font-style: italic;
+	font-size: 0.8em;
+	color: #826668;
+}	
+
+#facebook_button:hover {
+	background: url(img/facebook_button_hover.png) no-repeat top left;
+	color: #b09d9d;
+}	
+
+
+
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+
+
