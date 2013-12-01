@@ -10,7 +10,7 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage RNTheme
+ * @subpackage rntheme
  */
 
 get_header(); ?>
