@@ -32,12 +32,12 @@
 
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
-		<header id="masthead" class="site-header" role="banner">
-			<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</a>
-
+		<div id="masthead" class="site-header" role="banner">
+                <div class="container head">
+                    <a href="index.html"><img id="logo" src="wp-content/themes/rntheme/images/rozsa_logo.png" alt="Rózsátnevető Waldorf Óvoda" width="387" height="100"></a>
+                    <h1>„ Minden emberi lény egy fénylő <br>szellemet hordoz.”</h1>
+                    <p>Rózsátnevető Waldorf Óvoda&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://goo.gl/maps/omKTq" target="_blank">Budapest, XI. ker. Diószegi út 44.</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:rozsatneveto.ovoda@gmail.com">rozsatneveto.ovoda@gmail.com</a>&nbsp;&nbsp;|&nbsp;&nbsp;06 1 635 4878</p>
+                </div>
 			<div id="navbar" class="navbar">
 				<nav id="site-navigation" class="navigation main-navigation" role="navigation">
 					<h3 class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></h3>
@@ -46,6 +46,6 @@
 					<?php get_search_form(); ?>
 				</nav><!-- #site-navigation -->
 			</div><!-- #navbar -->
-		</header><!-- #masthead -->
+		</div><!-- #masthead -->
 
 		<div id="main" class="site-main">

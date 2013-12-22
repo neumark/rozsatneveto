@@ -11,3 +11,4 @@ installation
 3. Create local mysql db w/ data from wp-config.php
 4. Visit 127.0.0.1
 5. Activate "rntheme" template
+6. Add the disable comments plugin: http://wordpress.org/plugins/disable-comments/

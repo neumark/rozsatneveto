@@ -43,7 +43,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * 7.0 - Footer
  * 8.0 - Media Queries
  * 9.0 - Print
- * 10.0 - Zsolt's original CSS
+ * 10.0 - Menu
+ * 11.0 - Zsolt's original CSS
  * ----------------------------------------------------------------------------
  */
 
@@ -69,13 +70,13 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 nav,
 section,
 summary {
 	display: block;
 }
+
 
 audio,
 canvas,
@@ -143,7 +144,9 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-family: Bitter, Georgia, serif;
+	font-family: Georgia,"Times New Roman",Serif;
+	font-weight: bold;
+	color: #943476;
 	line-height: 1.3;
 }
 
@@ -765,11 +768,9 @@ img.wp-smiley,
  */
 
 .site {
-	background-color: #fff;
-	border-left: 1px solid #f2f2f2;
-	border-right: 1px solid #f2f2f2;
-	margin: 0 auto;
-	max-width: 1600px;
+	margin-left: auto;
+    margin-right: auto;
+	max-width: 960px;
 	width: 100%;
 }
 
@@ -800,7 +801,9 @@ img.wp-smiley,
  * 4.1 Site Header
  * ----------------------------------------------------------------------------
  */
-
+.site {
+    background: url('images/rozsa_background.png');
+}
 .site-header {
 	position: relative;
 }
@@ -845,6 +848,7 @@ img.wp-smiley,
 	max-width: 1080px;
 	min-height: 45px;
 	position: relative;
+    display: none;
 }
 
 ul.nav-menu,
@@ -984,7 +988,7 @@ ul.nav-menu li:hover > ul,
 .sidebar .entry-summary,
 .sidebar .entry-meta {
 	max-width: 1040px;
-	padding: 0 376px 0 60px;
+	padding: 0 10px 0 10px;
 }
 
 
@@ -1109,7 +1113,7 @@ ul.nav-menu li:hover > ul,
 
 .entry-content a,
 .comment-content a {
-	color: #bc360a;
+	color: #ae6798;
 }
 
 .entry-content a:hover,
@@ -2080,6 +2084,9 @@ footer.entry-meta {
  * 5.12 Comments
  * ----------------------------------------------------------------------------
  */
+.comments-area {
+    display: none;
+}
 
 .comments-title,
 .comment-list,
@@ -2385,8 +2392,6 @@ footer.entry-meta {
  */
 
 .site-main .widget-area {
-	float: right;
-	width: 300px;
 }
 
 
@@ -2396,20 +2401,19 @@ footer.entry-meta {
  */
 
 .widget {
-	background-color: rgba(247, 245, 231, 0.7);
-	font-size: 14px;
 	-webkit-hyphens: auto;
 	-moz-hyphens:    auto;
 	-ms-hyphens:     auto;
 	hyphens:         auto;
 	margin: 0 0 24px;
-	padding: 20px;
+	padding: 10px;
 	word-wrap: break-word;
 }
 
 .widget .widget-title {
 	font: 300 italic 20px "Source Sans Pro", Helvetica, sans-serif;
 	margin: 0 0 10px;
+    display: none;
 }
 
 .widget ul,
@@ -2505,6 +2509,7 @@ footer.entry-meta {
 	color: #686758;
 	font-size: 14px;
 	text-align: center;
+    display: none;
 }
 
 .site-footer .widget-area,
@@ -3108,6 +3113,10 @@ footer.entry-meta {
 	}
 
 	/* Comments */
+    .comments-area {
+        display: none;
+    }
+
 	.comments-area > li.comment {
 		background: none;
 		position: relative;
@@ -3125,62 +3134,34 @@ footer.entry-meta {
 	}
 }
 
+/** 9.0 Menu
+ *
+ */ 
+
+.menu-item-object-category > a {
+    font-family: Georgia,"Times New Roman",Serif;
+	line-height: 1.1em;
+	font-weight: bold;
+	text-decoration: none;
+	color: #943476;
+	font-size: 1.7em;
+}
+
+.menu-item-object-page > a {
+	font-family: Georgia,"Times New Roman",Serif;
+	font-size: 0.8em;
+	font-weight: bold;
+	line-height: 1.1em;
+	color: #392913;
+	text-decoration: none;
+
+}
+
+
 /**
  * 10.0 Original CSS from Zsolt
  * ----------------------------------------------------------------------------
  */
-/*--------css reset--------*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/*--------css reset--------*/
-
 
 body {
 	background: url('images/rozsa_background.png')
@@ -3315,14 +3296,15 @@ h3 {
 	font-weight: bold;
 }
 
+/*
 .left_content a {
 	font-family: Georgia,"Times New Roman",Serif;
 	font-size: 0.8em;
 	line-height: 1.3em;
-	color: #392913;
 	font-weight: bold;
 	text-decoration: none;
 }
+*/
 
 .left_content a.aktiv {
 	color: #a18c8e;
@@ -3399,7 +3381,7 @@ h3 {
 
 #facebook_button {
 	float: left;
-	background: url(img/facebook_button.png) no-repeat top left;
+	background: url(images/facebook_button.png) no-repeat top left;
 	padding-left: 56px;
 	margin-top: 56px;
 	font-weight: normal;
@@ -3409,7 +3391,7 @@ h3 {
 }	
 
 #facebook_button:hover {
-	background: url(img/facebook_button_hover.png) no-repeat top left;
+	background: url(images/facebook_button_hover.png) no-repeat top left;
 	color: #b09d9d;
 }	
 
