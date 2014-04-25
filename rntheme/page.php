@@ -49,23 +49,24 @@ get_header(); ?>
                 If the  -->
 
                 <?php /* The loop */
-                // save original wp_query
-                $old_wp_query = $wp_query;
-                // The Query
-                $wp_query = new WP_Query('category_name=kezdolap');
+                    if (is_front_page()) {
+                    // save original wp_query
+                    $old_wp_query = $wp_query;
+                    // The Query
+                    $wp_query = new WP_Query('category_name=kezdolap');
 
-                // The Loop
-                if ( $wp_query->have_posts() ) {
-                    echo "<h1>Aktuális</h1>";
-                    while ($wp_query->have_posts() ) {
-                        $wp_query->the_post();
-                        get_template_part( 'content-brief', get_post_format());
+                    // The Loop
+                    if ( $wp_query->have_posts() ) {
+                        echo "<h1>Aktuális</h1>";
+                        while ($wp_query->have_posts() ) {
+                            $wp_query->the_post();
+                            get_template_part( 'content-brief', get_post_format());
+                        }
+                    } else {
+                        // no posts found
                     }
-                } else {
-                    // no posts found
-                }
-                /* Restore original Post Data */
-                $wp_query = $old_wp_query;
+                    /* Restore original Post Data */
+                    $wp_query = $old_wp_query; }
                 ?>
 
 				<?php comments_template(); ?>
