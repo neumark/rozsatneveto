@@ -357,6 +357,22 @@ function twentythirteen_entry_meta() {
 }
 endif;
 
+function twentythirteen_entry_meta_brief() {
+	if ( is_sticky() && is_home() && ! is_paged() )
+		echo '<span class="featured-post">' . __( 'Sticky', 'twentythirteen' ) . '</span>';
+
+	if ( ! has_post_format( 'link' ) && 'post' == get_post_type() )
+		twentythirteen_entry_date();
+
+	if ( 'post' == get_post_type() ) {
+		printf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			esc_attr( sprintf( __( 'View all posts by %s', 'twentythirteen' ), get_the_author() ) ),
+			get_the_author()
+		);
+	}
+}
+
 if ( ! function_exists( 'twentythirteen_entry_date' ) ) :
 /**
  * Print HTML with date information for current post.

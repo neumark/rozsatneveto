@@ -12,7 +12,14 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+        <div id="content" class="site-content container clearfix" role="main">
+            <!-- widget area -->
+            <div class="left_content">
+                <?php get_sidebar(); ?>
+                <a id="facebook_button" href="http://www.google.com">Rózsátnevető<br>Waldorf Óvoda<br>a Facebookon</a>
+            </div> <!-- .left_content -->
+            <!-- main stuff -->
+            <div class="right_content"> 
 
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
@@ -33,7 +40,7 @@ get_header(); ?>
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
-
+            </div> <!-- .right-content -->
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

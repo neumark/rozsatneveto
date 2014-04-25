@@ -9,9 +9,16 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-
+    <div id="primary" class="content-area">
+        <div id="content" class="site-content container clearfix" role="main">
+            <!-- widget area -->
+            <div class="left_content">
+                <?php get_sidebar(); ?>
+                <a id="facebook_button" href="http://www.google.com">Rózsátnevető<br>Waldorf Óvoda<br>a Facebookon</a>
+            </div> <!-- .left_content -->
+            <!-- main stuff -->
+            <div class="right_content"> 
+	
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -20,9 +27,8 @@ get_header(); ?>
 				<?php comments_template(); ?>
 
 			<?php endwhile; ?>
-
+            </div> <!-- .right-content -->
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -10,7 +10,7 @@
  * @subpackage Twenty_Thirteen
  * @since Twenty Thirteen 1.0
  */
-
+global $wp_query;
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -22,10 +22,8 @@ get_header(); ?>
             </div> <!-- .left_content -->
             <!-- main stuff -->
             <div class="right_content"> 
-
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
 						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
@@ -37,7 +35,7 @@ get_header(); ?>
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 					</header><!-- .entry-header -->
 
-					<div class="entry-content">
+                    <div class="entry-content">
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 					</div><!-- .entry-content -->
@@ -45,7 +43,30 @@ get_header(); ?>
 					<footer class="entry-meta">
 						<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
 					</footer><!-- .entry-meta -->
-				</article><!-- #post -->
+                </article><!-- #post -->
+
+                <!-- This is a little ugly, but whatever.
+                If the  -->
+
+                <?php /* The loop */
+                // save original wp_query
+                $old_wp_query = $wp_query;
+                // The Query
+                $wp_query = new WP_Query('category_name=kezdolap');
+
+                // The Loop
+                if ( $wp_query->have_posts() ) {
+                    echo "<h1>Aktuális</h1>";
+                    while ($wp_query->have_posts() ) {
+                        $wp_query->the_post();
+                        get_template_part( 'content-brief', get_post_format());
+                    }
+                } else {
+                    // no posts found
+                }
+                /* Restore original Post Data */
+                $wp_query = $old_wp_query;
+                ?>
 
 				<?php comments_template(); ?>
 			<?php endwhile; ?>

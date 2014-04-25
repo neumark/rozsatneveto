@@ -14,24 +14,31 @@
  */
 
 get_header(); ?>
-
     <div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+        <div id="content" class="site-content container clearfix" role="main">
+            <!-- widget area -->
+            <div class="left_content">
+                <?php get_sidebar(); ?>
+                <a id="facebook_button" href="http://www.google.com">Rózsátnevető<br>Waldorf Óvoda<br>a Facebookon</a>
+            </div> <!-- .left_content -->
+            <!-- main stuff -->
+            <div class="right_content"> 
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+                <?php global $wp_query; var_dump(get_object_vars($wp_query));?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 
 			<?php twentythirteen_paging_nav(); ?>
 
-		<?php else : ?>
+        <?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
+            </div> <!-- .right-content -->
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

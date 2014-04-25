@@ -34,7 +34,7 @@
 	<div id="page" class="hfeed site">
 		<div id="masthead" class="site-header" role="banner">
                 <div class="container head">
-                    <a href="index.html"><img id="logo" src="wp-content/themes/rntheme/images/rozsa_logo.png" alt="Rózsátnevető Waldorf Óvoda" width="387" height="100"></a>
+                    <a href="/"><img id="logo" src="wp-content/themes/rntheme/images/rozsa_logo.png" alt="Rózsátnevető Waldorf Óvoda" width="387" height="100"></a>
                     <h1>„ Minden emberi lény egy fénylő <br>szellemet hordoz.”</h1>
                     <p>Rózsátnevető Waldorf Óvoda&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://goo.gl/maps/omKTq" target="_blank">Budapest, XI. ker. Diószegi út 44.</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:rozsatneveto.ovoda@gmail.com">rozsatneveto.ovoda@gmail.com</a>&nbsp;&nbsp;|&nbsp;&nbsp;06 1 635 4878</p>
                 </div>
