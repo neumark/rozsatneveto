@@ -806,6 +806,7 @@ img.wp-smiley,
 }
 .site-header {
 	position: relative;
+    padding-top: 16px;
 }
 
 .site-header .home-link {
@@ -2428,7 +2429,13 @@ footer.entry-meta {
 	padding: 0;
 }
 
+/*
 .widget li {
+	padding: 5px 0;
+}
+*/
+
+li.menu-item-type-taxonomy {
 	padding: 5px 0;
 }
 
@@ -3149,7 +3156,7 @@ footer.entry-meta {
 	font-weight: bold;
 	text-decoration: none;
 	color: #943476;
-	font-size: 1.7em;
+	font-size: 1.3em;
 }
 
 .menu-item-object-page > a {
