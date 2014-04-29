@@ -18,7 +18,7 @@ get_header(); ?>
             <!-- widget area -->
             <div class="left_content">
                 <?php get_sidebar(); ?>
-                <a id="facebook_button" href="https://www.facebook.com/pages/R%C3%B3zs%C3%A1tnevet%C5%91-Waldorf-%C3%93voda/288125094648612">Rózsátnevető<br>Waldorf Óvoda<br>a Facebookon</a>
+                <a id="facebook_button" href="https://www.facebook.com/pages/R%C3%B3zs%C3%A1tnevet%C5%91-Waldorf-%C3%93voda/288125094648612" target="_blank">Rózsátnevető<br>Waldorf Óvoda<br>a Facebookon</a>
             </div> <!-- .left_content -->
             <!-- main stuff -->
             <div class="right_content"> 
