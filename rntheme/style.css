@@ -137,6 +137,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+#ovi_logo {
+    margin-top: -4px;
+}
+
 h1,
 h2,
 h3,
@@ -1138,12 +1142,12 @@ ul.nav-menu li:hover > ul,
 
 .entry-content img.alignleft,
 .entry-content .wp-caption.alignleft {
-	margin-left: -60px;
+	/*margin-left: -60px; */
 }
 
 .entry-content img.alignright,
 .entry-content .wp-caption.alignright {
-	margin-right: -60px;
+	/* margin-right: -60px; */
 }
 
 footer.entry-meta {
